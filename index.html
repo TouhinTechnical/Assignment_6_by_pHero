@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="customCss/style.css">
 </head>
 <body>
-    <section class="mainSection">
+    <!-- Search Input -->
+    <section class="searchSection">
         <div class="container">
             <div class="row">
                 <div class="logoTitle text-center my-4 text-secondary">
@@ -20,12 +21,33 @@
                 <div class="searchInput w-50 mx-auto">
                     <div class="input-group mb-3">
                         <input id="searchInputField" type="text" class="form-control" placeholder="Search to your want" aria-label="Search toyour want" aria-describedby="button-addon2">
-                        <button onclick="searchMoblie()" class="btn btn-outline-info" type="button" id="searchButton">Button</button>
+                        <button onclick="searchMoblie()" class="btn btn-outline-info" type="button" id="searchButton">Search</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- dyanamic card details -->
+    <div class="container">
+        <div id="moblieDetails" class="w-50 mx-auto">
+            <!-- Dyanamic vabe div content golo ana holo -->
+        </div>
+    </div>
+    <!-- dyanamic card -->
+    <section class="cardSection">
+        <div class="container">
+            <div id="searchResult" class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Dyanamic vabe div content golo ana holo -->
+            </div>
+        </div>
+    </section>
+     <!-- alert -->
+    <div id="emptyString" class="w-50 mx-auto p-3 rounded">
+        input Field can't be empty! Please try again
+    </div>
+    <div id="noItemFound" class="w-50 mx-auto p-3 rounded">
+        Moblie Not Found! Please try again another moblie type
+    </div>
 
 
     <!-- script link -->

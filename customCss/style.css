@@ -7,3 +7,12 @@ body{
     font-family: 'Roboto', sans-serif;
     background: #daf0f080;
 }
+.card-img-top{
+    width: 300px; 
+}
+#noItemFound{
+    display: none;
+}
+#emptyString{
+    display: none;
+}
