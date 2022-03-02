@@ -10,9 +10,22 @@ body{
 .card-img-top{
     width: 300px; 
 }
+#searchResult{
+    padding-bottom: 100px;
+}
 #noItemFound{
     display: none;
 }
 #emptyString{
     display: none;
+}
+#moblieDetails{
+    margin-bottom: 30px;
+}
+#moblieDetails .card{
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 48px;
 }

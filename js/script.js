@@ -75,11 +75,35 @@ const displayMoblieDetails = slug => {
     div.classList.add('card');
     div.innerHTML =`
     <img src="${slug.image}" class="card-img-top" alt="...">
-    <h5 class="card-title"> Model: ${slug.name}</h5>
+    <h5 class="card-title mt-3"> Model: ${slug.name}</h5>
     <p class="card-text"> Brand: ${slug.brand}</p>
     <p class="card-text">
      Released Date: ${slug.releaseDate ? slug.releaseDate: "Not Avaiable"}
     </p>
+    <ul class="list-group"> Main Features :
+        <li class="list-group-item"> Chipset: ${slug.mainFeatures.chipSet}</li>
+        <li class="list-group-item"> Display Size: ${slug.mainFeatures.displaySize}</li>
+        <li class="list-group-item"> Memory: ${slug.mainFeatures.memory}</li>
+        <li class="list-group-item"> Sensors:
+            <ul class="list-group">
+                <li class="list-group-item">${slug.mainFeatures.sensors[0] ? slug.mainFeatures.sensors[0]: "Not Avaiable"}</li>
+                <li class="list-group-item">${slug.mainFeatures.sensors[1] ? slug.mainFeatures.sensors[1]: "Not Avaiable"}</li>
+                <li class="list-group-item">${slug.mainFeatures.sensors[2] ? slug.mainFeatures.sensors[2]: "Not Avaiable"}</li>
+                <li class="list-group-item">${slug.mainFeatures.sensors[3] ? slug.mainFeatures.sensors[3]: "Not Avaiable"}</li>
+                <li class="list-group-item">${slug.mainFeatures.sensors[4] ? slug.mainFeatures.sensors[4]: "Not Avaiable"}</li>
+                <li class="list-group-item">${slug.mainFeatures.sensors[5] ? slug.mainFeatures.sensors[5]: "Not Avaiable"}</li>
+            </ul>
+        </li>
+        <li class="list-group-item"> Storage: ${slug.mainFeatures.storage}</li>
+    </ul>
+    <ul class="list-group"> Others:
+        <li class="list-group-item">Bluetooth: ${slug.others.Bluetooth}</li>
+        <li class="list-group-item">GPS: ${slug.others.GPS}</li>
+        <li class="list-group-item">NFC: ${slug.others.NFC ? slug.others.NFC: "Not Avaiable"}</li>
+        <li class="list-group-item">Radio: ${slug.others.Radio}</li>
+        <li class="list-group-item">USB: ${slug.others.USB}</li>
+        <li class="list-group-item">WLAN: ${slug.others.WLAN}</li>
+    </ul>
     `;
     moblie_Detailes.appendChild(div);
 }
