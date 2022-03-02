@@ -51,7 +51,7 @@ const displaySearchResult = data => {
                 <div class="card-body">
                     <h5 class="card-title"> Model : ${moblie.phone_name}</h5>
                     <p class="card-text"> Brand : ${moblie.brand}</p>
-                    <button onclick = "loadMoreDetail()" class="btn btn-outline-primary">Details</button>
+                    <button onclick = "loadMoreDetail('${moblie.slug}')" class="btn btn-outline-primary">Details</button>
                 </div>
             </div>
             `;
@@ -60,21 +60,26 @@ const displaySearchResult = data => {
     }
 }
 // Moblie details json & api link
-const loadMoreDetail = slug => {
-    const url =`https://openapi.programming-hero.com/api/phone/'${slug}'`;
+const loadMoreDetail = moblie => {
+    // console.log(moblie);
+    const url =`https://openapi.programming-hero.com/api/phone/${moblie}`;
     fetch(url)
     .then(res => res.json())
-    .then(data => displayMoblieDetails(data.data.slug))
+    .then(data => displayMoblieDetails(data.data));
 }
 const displayMoblieDetails = slug => {
     // console.log(slug);
     const moblie_Detailes = document.getElementById('moblieDetails');
+    moblie_Detailes.textContent = ''; // details clear
     const div = document.createElement('div');
     div.classList.add('card');
     div.innerHTML =`
-    <img src="..." class="card-img-top" alt="...">
-    <h5 class="card-title">amfghhgfc</h5>
-    <p class="card-text">amicdsddffd</p>
+    <img src="${slug.image}" class="card-img-top" alt="...">
+    <h5 class="card-title"> Model: ${slug.name}</h5>
+    <p class="card-text"> Brand: ${slug.brand}</p>
+    <p class="card-text">
+     Released Date: ${slug.releaseDate ? slug.releaseDate: "Not Avaiable"}
+    </p>
     `;
     moblie_Detailes.appendChild(div);
 }
