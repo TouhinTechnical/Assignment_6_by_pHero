@@ -96,6 +96,7 @@ const displayMoblieDetails = slug => {
         </li>
         <li class="list-group-item"> Storage: ${slug.mainFeatures.storage}</li>
     </ul>
+    
     <ul class="list-group"> Others:
         <li class="list-group-item">Bluetooth: ${slug.others ? slug.others.Bluetooth: "Not Avaiable"}</li>
         <li class="list-group-item">GPS: ${slug.others ? slug.others.GPS: "Not Avaiable"}</li>
