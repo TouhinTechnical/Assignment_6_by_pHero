@@ -97,12 +97,12 @@ const displayMoblieDetails = slug => {
         <li class="list-group-item"> Storage: ${slug.mainFeatures.storage}</li>
     </ul>
     <ul class="list-group"> Others:
-        <li class="list-group-item">Bluetooth: ${slug.others.Bluetooth}</li>
-        <li class="list-group-item">GPS: ${slug.others.GPS}</li>
-        <li class="list-group-item">NFC: ${slug.others.NFC ? slug.others.NFC: "Not Avaiable"}</li>
-        <li class="list-group-item">Radio: ${slug.others.Radio}</li>
-        <li class="list-group-item">USB: ${slug.others.USB}</li>
-        <li class="list-group-item">WLAN: ${slug.others.WLAN}</li>
+        <li class="list-group-item">Bluetooth: ${slug.others ? slug.others.Bluetooth: "Not Avaiable"}</li>
+        <li class="list-group-item">GPS: ${slug.others ? slug.others.GPS: "Not Avaiable"}</li>
+        <li class="list-group-item">NFC: ${slug.others ? slug.others.NFC: "Not Avaiable"}</li>
+        <li class="list-group-item">Radio: ${slug.others ? slug.others.Radio: "Not Avaiable"}</li>
+        <li class="list-group-item">USB: ${slug.others ? slug.others.USB: "Not Avaiable"}</li>
+        <li class="list-group-item">WLAN: ${slug.others ? slug.others.WLAN: "Not Avaiable"}</li>
     </ul>
     `;
     moblie_Detailes.appendChild(div);
