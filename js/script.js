@@ -1,3 +1,4 @@
+// create search Input & API link fetch
 const searchMoblie = () => {
     const searchInputValue = document.getElementById('searchInputField');
     const searchText = searchInputValue.value;
@@ -23,6 +24,16 @@ const searchMoblie = () => {
         .then(data => displaySearchResult(data.data.slice(0, 20)));
     }
 };
+
+// Enter press
+const searchInputValue = document.getElementById('searchInputField');
+const searchButton = document.getElementById('searchButton');
+
+searchInputValue.addEventListener("keypress", function (event){
+    if (event.key == "Enter") {
+        searchButton.click();
+    }
+});
 
 // search Result
 const displaySearchResult = data => {
@@ -96,7 +107,7 @@ const displayMoblieDetails = slug => {
         </li>
         <li class="list-group-item"> Storage: ${slug.mainFeatures.storage}</li>
     </ul>
-    
+
     <ul class="list-group"> Others:
         <li class="list-group-item">Bluetooth: ${slug.others ? slug.others.Bluetooth: "Not Avaiable"}</li>
         <li class="list-group-item">GPS: ${slug.others ? slug.others.GPS: "Not Avaiable"}</li>
